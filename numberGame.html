@@ -1,7 +1,3 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,13 +13,13 @@ and open the template in the editor.
         <div id="outer"><div id="inner"></div></div>
         <h1>The Guessing Game</h1>
         <p>You get 5 chances to guess the number between 1 and 10.</p>
+        <p>To begin, press your first guess.</p>
         <table>
             <tr><td id="1">1</td><td id="2">2</td><td id="3">3</td></tr>
             <tr><td id="4">4</td><td id="5">5</td><td id="6">6</td></tr>
             <tr><td id="7">7</td><td id="8">8</td><td id="9">9</td></tr>
-            <tr><td id="start" onclick="gameLogic();">Start!</td><td id="10">10</td><td id="reset" onClick="window.location.reload();">Reset</td></tr>
+            <tr><td id="guessLeft">Guesses remaining</td><td id="10">10</td><td id="reset" onClick="window.location.reload();">Reset</td></tr>
             <tr><td colspan="3" id="result"></td></tr>
         </table>
-        <div id="guessLeft">5</div>
     </body>
 </html>

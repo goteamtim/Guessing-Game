@@ -1,23 +1,25 @@
-$(document).ready(function(){
-    $("td").click(function(){
-        $(this).fadeTo("slow",.33);
+$(document).ready(function() {
+    $("td").click(function() {
+        $(this).fadeTo("fast", .33);
+    });
 });
 
-
-});
 //    $("#start").click(gameLogic());
 //    $("#reset").click(window.location.reload());
 result = "test";
 //Initialize the winning number
-    var winningNum = Math.floor(Math.random()*11);
-    
+var winningNum = Math.floor(Math.random() * 11);
+
 function gameLogic() {
-guesses = 5;
-console.log(winningNum);
+    guesses = 5;
+    console.log(winningNum);
 
     do {
         guess = prompt("What is your guess?");
-        //If something other than a number is entered, it fails and asks again.
+//        //If something other than a number is entered, it fails and asks again.
+//        Eventually this will be replaced by another function all together because
+//        that function will collect the status of the div's and then collect input from a click and \n\
+//        return an input.
         if (isNaN(guess)) {
             guess = prompt("What is your guess?", "Please enter a number.");
             break;
@@ -34,10 +36,17 @@ console.log(winningNum);
             document.getElementById('guessLeft').innerHTML = guesses;
         } else {
             result = "Congrats, you won! Wanna play again?";
+
             document.getElementById('result').innerHTML = result;
-            
+
             break;
         }
     }
     while (guesses > 0);
+}
+;
+
+function divGuess() {
+    
+    
 };

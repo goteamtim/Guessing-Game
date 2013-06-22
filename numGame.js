@@ -94,7 +94,13 @@ function gameLogic() {
             //break;
         }
     } else {
-        alert("Restart game.");
+        var i = confirm("Sorry, you coudln't guess the number this time. Would you like to play again?");
+        if (i==true){
+            window.location.reload();
+        }
+        else{
+            
+        }
     }
 }
 

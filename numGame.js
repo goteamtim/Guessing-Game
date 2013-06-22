@@ -2,8 +2,11 @@ $(document).ready(function(){
     $("td").click(function(){
         $(this).fadeTo("slow",.33);
 });
-});
 
+
+});
+//    $("#start").click(gameLogic());
+//    $("#reset").click(window.location.reload());
 result = "test";
 //Initialize the winning number
     var winningNum = Math.floor(Math.random()*11);
@@ -31,7 +34,6 @@ console.log(winningNum);
             document.getElementById('guessLeft').innerHTML = guesses;
         } else {
             result = "Congrats, you won! Wanna play again?";
-            window.location.reload()
             document.getElementById('result').innerHTML = result;
             
             break;
@@ -39,5 +41,3 @@ console.log(winningNum);
     }
     while (guesses > 0);
 };
-
-

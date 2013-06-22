@@ -1,3 +1,11 @@
+/* 
+    Document   : numCss
+    Created on : Jun 19, 2013, 8:11:53 AM
+    Author     : Tim
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
 root { 
     display: block;
 }
@@ -7,4 +15,67 @@ div {
     width: 100px;
     border-radius: 5px;
     background-color: #ABCDEF;
+}
+h1 {
+    text-align: center;
+    font-family: serif;
+}
+
+button {
+    border-radius: 40px;
+}
+
+span {
+    solid-border-bottom: black;
+    size: 40px;
+}
+
+p {
+    text-align: center;
+}
+
+#outer {
+    height: 50em;
+    width: 50em;
+    background-color: #0099cc;
+    border-radius: 1050px;
+    float: top;
+    margin-top: -480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inner {
+    height: 47em;
+    width: 46em;
+    background-color: #ff9900;
+    border-radius: 1050px;
+    float: top;
+    margin-top: -480px;
+    
+    margin: 0 auto;
+}
+
+#guessLeft {
+    border-radius: 100px;
+    text-align: center;
+    background: ;
+}
+
+table td {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #09a4f8;
+    text-align: center;
+    font-size: 35px;
+}
+
+#blank {
+    background-color: transparent;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }

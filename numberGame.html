@@ -1,7 +1,12 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <title>Number Game</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="numCss.css"/>
     </head>
@@ -12,10 +17,19 @@
             Low: <input type="text" id="low">
             High: <input type="text" id="high">
         </form>-->
+       <div id="outer"><div id="inner"></div></div>
        <h1>The Guessing Game</h1>
-       <p>You get 5 chances to guess the number between 1 and 10.</p>
+       <p>You get 5 chances to guess the number between 0 and 10.</p>
         <button id="check" onclick="gameLogic()">Begin Game</button>
-        <div id="result" height="20px" width="60px" color="blue" >Results displayed here.</div>
+        <table>
+            <tr><td id="1">1</td><td id="2">2</td><td id="3">3</td></tr>
+            <tr><td id="4">4</td><td id="5">5</td><td id="6">6</td></tr>
+            <tr><td id="7">7</td><td id="8">8</td><td id="9">9</td></tr>
+            <tr><td id="blank"></td><td id="10">10</td><td id="blank"></td></tr>
+        </table>
+        
+        <div id="result" height="20px" width="60px" color="blue" ></div>
+        <div id="guessLeft">5</div>
         <input type="button" value="Play again" onClick="window.location.reload()">
         
         

@@ -1,9 +1,16 @@
+$(document).ready(function(){
+    $("td").click(function(){
+        $(this).fadeTo("slow",.33);
+});
+});
+
 result = "test";
 //Initialize the winning number
     var winningNum = Math.floor(Math.random()*11);
     
 function gameLogic() {
-guesses = 0;
+guesses = 5;
+console.log(winningNum);
 
     do {
         guess = prompt("What is your guess?");
@@ -14,21 +21,23 @@ guesses = 0;
         }
         if (guess > winningNum) {
             result = "Your guess is too high.";
-            console.log(result);
             document.getElementById('result').innerHTML = result;
-            guesses++;
+            guesses--;
+            document.getElementById('guessLeft').innerHTML = guesses;
         } else if (guess < winningNum) {
             result = "Your guess is too low.";
-            console.log(result);
             document.getElementById('result').innerHTML = result;
-            guesses++;
+            guesses--;
+            document.getElementById('guessLeft').innerHTML = guesses;
         } else {
-            result = "Congrats, you won!";
-            console.log(result);
+            result = "Congrats, you won! Wanna play again?";
+            window.location.reload()
             document.getElementById('result').innerHTML = result;
+            
             break;
         }
-        
     }
-    while (guesses < 5);
+    while (guesses > 0);
 };
+
+

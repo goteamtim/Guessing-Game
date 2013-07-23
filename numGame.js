@@ -71,6 +71,13 @@ $(document).ready(function() {
     });
 
 });
+
+var time = new Date();
+var timeNow = time.getHours();
+    if (timeNow >4){
+        document.getElementsByClassName('numberColor').defineProperty('background-color:black;');
+    }
+    
 var guess;
 result = "test";
 //Initialize the winning number
